@@ -122,3 +122,168 @@
 // }
 
 // console.log("result", string);
+
+// for (let i = 0; i <= 5; i += 1) {
+//     console.log(i);
+
+//     if (i === 3) {
+//       console.log("нашли число 3");
+//       break;
+//     }
+//   }
+
+//   for (let i = 0; i < 15; i += 1) {
+//     console.log( 'before', i);
+//     if (i / 3 === 4 || i / 2 === 5) {
+//       continue;
+//     }
+//     console.log('after', i);
+//   }
+
+// const array1 = [1, 2, 3];
+// const array2 = array1;
+
+// // console.log(array1)
+// // console.log(array2)
+
+// array1[0] = 10
+
+// // console.log(array1)
+// // console.log(array2)
+
+// array2[2] = 5
+
+// // console.log(array1)
+
+// const array3 = array2
+
+// // console.log(array3)
+
+// array3[0] = 100;
+
+// // console.log(array1)
+
+// array2.length = 0;
+
+// console.log(array3)
+
+// let array1 = [1, 2, 3]
+// let array2 = array1;
+
+// array1 = [100, 200, 300]
+
+// array2 = array1
+
+// console.log(array2)
+
+// add(1, 2, 3)
+
+// function add(a, b, c) {
+//     console.log(a + b + c)
+// }
+
+// add(1, 2, 3)
+
+// const add1 = function (a, b, c) {
+//     console.log('here')
+//     // return
+// //     const sum = a + b + c
+//     // return sum
+// }
+
+// // const invoke = add1(1, 2, 3)
+
+// // console.log(invoke)
+// console.log(add1(1, 2, 3))
+
+// let a = 5;
+
+// if (10 > 0) {
+// //   const a = 10;
+//   // console.log(a)
+
+//   if (100 > 10) {
+//     a = 100;
+//     // console.log(a);
+//   }
+// }
+
+// console.log(a);
+
+// const obj = {
+//     a: 1,
+//     b: 2,
+//     c: 3,
+// }
+
+// const key = 'b'
+
+// // console.log(obj.b)
+// // console.log(obj['b'])
+
+// console.log(obj['b'])
+
+// const student = {
+//     name: 'Anna',
+//     homeworkResults: [{topic: 'html', result: true}, {topic: 'css', result: true}],
+//     addResults(topic, result) {
+//         this.homeworkResults.push({topic, result})
+//     }
+// }
+
+// // console.log(student.homeworkResults)
+// student.addResults('js', false)
+// console.log(student.homeworkResults)
+
+// const a = {}
+
+// const b = 'key2'
+
+// a.key = 5;
+// a['key1'] = 10
+// a[b] = 100
+
+// console.log(a)
+
+const items = [
+  {
+    letter: "a",
+    number: 10,
+    bool: true,
+  },
+  {
+    letter: "r",
+    number: 13,
+    bool: true,
+  },
+  {
+    letter: "h",
+    number: 16,
+    bool: false,
+  },
+  {
+    letter: "c",
+    number: 60,
+    bool: true,
+  },
+  {
+    letter: "p",
+    number: 100,
+    bool: false,
+  },
+];
+
+const object = {}
+
+const keys = Object.keys(items[0])
+console.log(keys)
+
+for (let key of keys) {
+    console.log(key)
+    object[key] = [];
+    console.log(object)
+}
+
+console.log(object)
+
+
