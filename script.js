@@ -245,45 +245,178 @@
 
 // console.log(a)
 
-const items = [
-  {
-    letter: "a",
-    number: 10,
-    bool: true,
-  },
-  {
-    letter: "r",
-    number: 13,
-    bool: true,
-  },
-  {
-    letter: "h",
-    number: 16,
-    bool: false,
-  },
-  {
-    letter: "c",
-    number: 60,
-    bool: true,
-  },
-  {
-    letter: "p",
-    number: 100,
-    bool: false,
-  },
-];
+// const items = [
+//   {
+//     letter: "a",
+//     number: 10,
+//     bool: true,
+//   },
+//   {
+//     letter: "r",
+//     number: 13,
+//     bool: true,
+//   },
+//   {
+//     letter: "h",
+//     number: 16,
+//     bool: false,
+//   },
+//   {
+//     letter: "c",
+//     number: 60,
+//     bool: true,
+//   },
+//   {
+//     letter: "p",
+//     number: 100,
+//     bool: false,
+//   },
+// ];
 
-const object = {}
+// const dataObject = {}
 
-const keys = Object.keys(items[0])
-console.log(keys)
+// const keys = Object.keys(items[0])
+// // console.log(keys)
 
-for (let key of keys) {
-    console.log(key)
-    object[key] = [];
-    console.log(object)
-}
+// for (let key of keys) {
+//     // console.log(key)
+//     dataObject[key] = [];
+//     // console.log(object)
+// }
 
-console.log(object)
+// console.log(dataObject)
+
+// for (const objKey in dataObject) {
+//   for (const item of items) {
+//     dataObject[objKey].push(item[objKey])
+//   }
+// }
+
+// // console.log(dataObject)
+
+// const car1 = {
+//   brand: "Toyota",
+//   model: 700,
+//   color: "blue",
+//   max: 240,
+//   isNew: true,
+//   dimensions: {
+//     weight: 2000,
+//     height: 150,
+//     length: 4.2,
+//   },
+// };
+
+// const car2 = {
+//   brand: "Nissan",
+//   model: 700,
+//   color: "red",
+//   max: 240,
+//   isNew: true,
+//   dimensions: {
+//     height: 150,
+//     length: 4.2,
+//   },
+// };
+
+// function createMessage({
+//   color = "No info",
+//   max: maxSpeed = "No info",
+//   isNew = "No info",
+//   dimensions: { weight = "No info" },
+// }) {
+//   const message = `
+//   Color: ${color}
+//   Max speed: ${maxSpeed}
+//   Is new: ${isNew}
+//   Weight: ${weight}
+//   `;
+//   console.log(message);
+// }
+
+// createMessage(car2);
+
+// const add = (a, b) => {
+//   console.log(a + b);
+// };
+
+// const multiply = (a, b) => {
+//   console.log(a * b);
+// };
+
+// function mathOperations(num1, num2, callback1, callback2) {
+//   if (num1 > num2) {
+//     callback1(num1, num2);
+//   } else {
+//     callback2(num1, num2);
+//   }
+// }
+
+// // mathOperations(10, 20, add, multiply)
+
+// // mathOperations(5, 3, add, multiply)
+
+// // mathOperations(
+// //   5,
+// //   3,
+// //   (a, b) => {
+// //     console.log(a + b);
+// //   },
+// //   (a, b) => {
+// //     console.log(a * b);
+// //   }
+// // );
+
+const planets = ["Земля", "Марс", "Венера", "Юпитер"];
+
+// planets.forEach((elem, index, array) => {
+//   console.log(elem);
+//   console.log(index);
+//   console.log(array);
+// });
+
+// const array = [];
+// planets.forEach((elem) => {
+//   array.push(elem + '!')
+// });
+
+// const array = planets.map((elem) => elem + '!')
 
 
+// const resultArray = planets.map((elem) => {
+//   if (elem.length > 5) {
+//     return elem.toUpperCase();
+//   }
+//   return elem;
+// });
+
+// console.log(resultArray)
+
+// const filtered = planets.filter((elem) => elem.length > 5 || elem.length < 5)
+
+// console.log(filtered)
+
+// const finded = planets.find((elem) => elem.length > 10)
+
+// console.log(finded)
+
+
+// const result = planets.reduce((acc, item, idx) => {
+//   console.log(`iteartion # ${idx + 1}`)
+//   console.log('acc', acc)
+//   console.log(item)
+//   acc += item.length
+//   return acc
+// }, 0)
+
+// console.log(result)
+
+// const result = planets.reduce((acc, item, idx) => {
+//   console.log(`iteartion # ${idx + 1}`)
+//   console.log('acc', acc)
+//   console.log(item)
+//   acc += item.length
+//   return acc
+// })
+
+// console.log(result)
