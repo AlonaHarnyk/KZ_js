@@ -1,133 +1,93 @@
-// const inventory = {
-//   items: ['Knife', 'Gas mask'],
-//   add(itemName) {
-//     console.log(`Adding ${itemName} to inventory`);
+// const div1 = document.querySelector('div')
+// console.log(div1)
 
-//     this.items.push(itemName);
-//   },
-//   remove(itemName) {
-//     console.log(`Removing ${itemName} from inventory`);
+// const div2 = document.querySelector('.root')
+// console.log(div2)
 
-//     this.items = this.items.filter(item => item !== itemName);
-//   },
-// };
+// // const div3 = document.querySelector('#root')
+// // console.log(div3)
+// // const div3 = document.getElementById('root')
+// // console.log(div3)
 
-// const invokeInventoryAction = function(itemName, action) {
-//   console.log(`Invoking action on ${itemName}`);
-//   action(itemName);
-// };
+// const divs = document.querySelectorAll('div')
+// console.log(divs)
+// divs.forEach(div => console.log(div))
 
-// invokeInventoryAction('Medkit', inventory.add);
-// // Invoking action on Medkit
-// // Adding Medkit to inventory
+const p = document.querySelector('.text')
+// console.log(p.parentNode)
 
-// // console.log(inventory.items); // ['Knife', 'Gas mask', 'Medkit']
+// const list = document.querySelector('.list1')
+// // console.log(list.firstElementChild)
 
-// invokeInventoryAction('Gas mask', inventory.remove);
-// // Invoking action on Gas mask
-// // Removing Gas mask from inventory
+// const items = list.querySelectorAll('li')
+// console.log(items)
 
-// // console.log(inventory.items); // ['Knife', 'Medkit']
+// const input = document.querySelector('input')
+// console.log(input['name'])
+// input.value = '150'
 
+// console.log(p.textContent)
+// p.textContent = 'Hello!'
 
-// // BIND
+p.classList.add('color')
+// p.classList.remove('color')
+// console.log(p.classList.contains('color'))
 
-// const inventory = {
-//   items: ['Knife', 'Gas mask'],
-//   add(itemName) {
-//     console.log(`Adding ${itemName} to inventory`);
+// const button = document.querySelector(".btn");
 
-//     this.items.push(itemName);
-//   },
-//   remove(itemName) {
-//     console.log(`Removing ${itemName} from inventory`);
+// p.style.backgroundColor = "teal";
+// p.style.fontSize = "24px";
+// p.style.color = '#fff'
 
-//     this.items = this.items.filter(item => item !== itemName);
-//   },
-// };
+// const img = document.querySelector('img')
 
-// const invokeInventoryAction = function (itemName, action) {
-//   console.log(`Invoking action on ${itemName}`);
-//   action(itemName);
-// };
+// console.log(img.hasAttribute('alt'))
+// // img.setAttribute('alt', 'photo') 
+// img.alt = 'photo'
+// // console.log(img.getAttribute('alt'))
+// console.log(img.alt)
 
-// invokeInventoryAction('Medkit', inventory.add.bind(inventory));
+// console.log(img.attributes)
 
+// const saveBtn = document.querySelector('[data-action="save"]');
+// const closeBtn = document.querySelector('[data-id="close"]');
 
-// // Invoking action on Medkit
-// // Adding Medkit to inventory
+// console.log(saveBtn.dataset.action); //save
+// console.log(closeBtn.dataset.id); //close
 
-// // console.log(inventory.items); // ['Knife', 'Gas mask', 'Medkit']
+const wrapper = document.querySelector('.wrapper')
 
-// invokeInventoryAction('Gas mask', inventory.remove.bind(inventory));
-// // // Invoking action on Gas mask
-// // // Removing Gas mask from inventory
+// const span1 = document.createElement('span')
+// span1.textContent = 'Text'
+// span1.classList.add('color')
+// const span2 = document.createElement('span')
 
-// // // console.log(inventory.items); // ['Knife', 'Medkit']
+// wrapper.append(span1, span2)
 
+// span2.remove()
 
-// // CALL
-// const inventory = {
-//   items: ['Knife', 'Gas mask'],
-//   add(itemName) {
-//     console.log(`Adding ${itemName} to inventory`);
+// console.log(wrapper.innerHTML)
+// wrapper.innerHTML = '<span>000</span>'
 
-//     this.items.push(itemName);
-//   },
-//   remove(itemName) {
-//     console.log(`Removing ${itemName} from inventory`);
+// const inner = document.querySelector('.inner')
+// inner.innerHTML = '<p>333</p>'
+// inner.innerHTML = ''
 
-//     this.items = this.items.filter(item => item !== itemName);
-//   },
-// };
+const ul = document.createElement('ul')
+wrapper.append(ul)
+console.log(ul)
 
-// const invokeInventoryAction = function (itemName, action) {
-//   console.log(this)
-//   console.log(`Invoking action on ${itemName}`);
-//   action.call(this, itemName);
-// };
+const array = [
+    {a: 1, b: 2},
+    {a: 3, b: 4},
+    {a: 5, b: 6}
+]
 
-// invokeInventoryAction.call(inventory, 'Medkit', inventory.add);
-// // Invoking action on Medkit
-// // Adding Medkit to inventory
+// const markup = array.map(({ a, b }) => `<li><p>${a}</p><p>${b}</p></li>`).join('')
 
-// // console.log(inventory.items); // ['Knife', 'Gas mask', 'Medkit']
+// console.log(markup)
 
-// invokeInventoryAction.call(inventory, 'Gas mask', inventory.remove);
-// // Invoking action on Gas mask
-// // Removing Gas mask from inventory
+// ul.insertAdjacentHTML('afterbegin', markup)
 
-// // console.log(inventory.items); // ['Knife', 'Medkit']
-
-// // APPLY
-// const inventory = {
-//   items: ['Knife', 'Gas mask'],
-//   add(itemName) {
-//     console.log(`Adding ${itemName} to inventory`);
-
-//     this.items.push(itemName);
-//   },
-//   remove(itemName) {
-//     console.log(`Removing ${itemName} from inventory`);
-
-//     this.items = this.items.filter(item => item !== itemName);
-//   },
-// };
-
-// const invokeInventoryAction = function (itemName, action) {
-//   console.log(this)
-//   console.log(`Invoking action on ${itemName}`);
-//   action.apply(this, [itemName]);
-// };
-
-// invokeInventoryAction.apply(inventory, ['Medkit', inventory.add]);
-// // Invoking action on Medkit
-// // Adding Medkit to inventory
-
-// // console.log(inventory.items); // ['Knife', 'Gas mask', 'Medkit']
-
-// invokeInventoryAction.apply(inventory, ['Gas mask', inventory.remove]);
-// // Invoking action on Gas mask
-// // Removing Gas mask from inventory
-
-// // console.log(inventory.items); // ['Knife', 'Medkit']
+// ТАК НЕ НАДО
+// array.forEach(({a, b}) => ul.insertAdjacentHTML('afterbegin', `<li><p>${a}</p><p>${b}</p></li>`))
