@@ -13,7 +13,7 @@
 // console.log(divs)
 // divs.forEach(div => console.log(div))
 
-const p = document.querySelector('.text')
+// const p = document.querySelector('.text')
 // console.log(p.parentNode)
 
 // const list = document.querySelector('.list1')
@@ -29,7 +29,7 @@ const p = document.querySelector('.text')
 // console.log(p.textContent)
 // p.textContent = 'Hello!'
 
-p.classList.add('color')
+// p.classList.add('color')
 // p.classList.remove('color')
 // console.log(p.classList.contains('color'))
 
@@ -55,7 +55,7 @@ p.classList.add('color')
 // console.log(saveBtn.dataset.action); //save
 // console.log(closeBtn.dataset.id); //close
 
-const wrapper = document.querySelector('.wrapper')
+// const wrapper = document.querySelector('.wrapper')
 
 // const span1 = document.createElement('span')
 // span1.textContent = 'Text'
@@ -73,15 +73,15 @@ const wrapper = document.querySelector('.wrapper')
 // inner.innerHTML = '<p>333</p>'
 // inner.innerHTML = ''
 
-const ul = document.createElement('ul')
-wrapper.append(ul)
-console.log(ul)
+// const ul = document.createElement('ul')
+// wrapper.append(ul)
+// console.log(ul)
 
-const array = [
-    {a: 1, b: 2},
-    {a: 3, b: 4},
-    {a: 5, b: 6}
-]
+// const array = [
+//     {a: 1, b: 2},
+//     {a: 3, b: 4},
+//     {a: 5, b: 6}
+// ]
 
 // const markup = array.map(({ a, b }) => `<li><p>${a}</p><p>${b}</p></li>`).join('')
 
@@ -91,3 +91,72 @@ const array = [
 
 // ТАК НЕ НАДО
 // array.forEach(({a, b}) => ul.insertAdjacentHTML('afterbegin', `<li><p>${a}</p><p>${b}</p></li>`))
+
+
+
+// const text = document.querySelector('.text')
+
+
+// text.addEventListener('click', clickHandler)
+
+// function clickHandler(event) {
+//     console.log(event)
+//     console.log(event.target.textContent)
+// }
+
+// document.addEventListener("keydown", event => {
+// //     console.log(event)
+// //   console.log("key: ", event.key);
+// //     console.log("code: ", event.code);
+//     console.log(event.code)
+
+//     if (event.key === 's') { 
+//         console.log('s')
+//         return
+//     }
+    
+//     console.log('not s')
+
+// });
+
+const inputEl = document.querySelector('.input')
+
+// inputEl.addEventListener('input', inputHandler)
+
+// function inputHandler(event) {
+//     console.log(event.target.value)
+// }
+
+// inputEl.addEventListener('focus', focusHandler)
+
+// function focusHandler() {
+//     inputEl.style.backgroundColor = 'red'
+// }
+
+// // inputEl.addEventListener('blur', blurHandler)
+
+// // function blurHandler() {
+// //     inputEl.style.backgroundColor = 'grey'
+// // }
+
+// inputEl.addEventListener('change', changeHandler)
+
+
+//     inputEl.style.backgroundColor = 'green'
+// }
+
+const form = document.querySelector(".form");
+
+form.addEventListener("submit", handleSubmit);
+
+function handleSubmit(event) {
+    event.preventDefault();
+    // console.log(event.target.elements.login.value.length)
+
+  const {
+    elements: { login: {value}}
+  } = event.target;
+    
+  console.log(value.length)
+  event.target.reset();
+}
