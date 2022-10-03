@@ -1,0 +1,29 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "test",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "echo \"Hello\" && node script.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlonaHarnyk/KZ_js.git"
+  },
+  "keywords": [
+    "test"
+  ],
+  "author": "Alona Harnyk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlonaHarnyk/KZ_js/issues"
+  },
+  "homepage": "https://github.com/AlonaHarnyk/KZ_js#readme",
+  "dependencies": {
+    "validator": "^13.0.0"
+  },
+  "devDependencies": {
+    "uuid-random": "^1.3.2"
+  }
+}
