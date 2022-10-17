@@ -77,4 +77,4 @@ form.addEventListener("submit", (event) => {
   button.classList.add("unvisible");
   getEvents(pageToFetch, keyword);
   form.reset();
-});
+}); 
